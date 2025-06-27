@@ -10,7 +10,7 @@ import (
 
 var (
 	message = flag.String("message", "Hello from probe!", "Message to echo")
-	port    = flag.String("port", "8080", "Port to listen on")
+	port    = flag.String("port", "8943", "Port to listen on")
 )
 
 func main() {
