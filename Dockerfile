@@ -26,16 +26,16 @@ WORKDIR /root/
 # Copy the binary from builder stage
 COPY --from=builder /app/main .
 
-# Expose port 8080
-EXPOSE 8080
+# Expose port 8943
+EXPOSE 8943
 
 # Default environment variables
 ENV ECHO_MESSAGE="Hello from probe!"
-ENV PORT="8080"
+ENV PORT="8943"
 
 # Health check
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-  CMD wget --no-verbose --tries=1 --spider http://localhost:8080/health || exit 1
+  CMD wget --no-verbose --tries=1 --spider http://localhost:8943/health || exit 1
 
 # Run the binary
 ENTRYPOINT ["./main"]
