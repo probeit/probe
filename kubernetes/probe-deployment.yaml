@@ -15,7 +15,7 @@ spec:
         app: probe
     spec:
       containers:
-        - image: ghcr.io/probeit/probe:v0.1.4
+        - image: ghcr.io/probeit/probe:v0.2.0
           name: probe
           ports:
             - containerPort: 8943
